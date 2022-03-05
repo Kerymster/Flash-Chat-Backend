@@ -12,7 +12,7 @@ const io = socketio(server);
 io.on("connection", (socket) => {
   console.log("we have a new connection!!!");
 
-  socket.on("participant", ({ name, room }) => {
+  socket.on("participant", ({ name, room }, callback) => {
     console.log(name, room);
   });
 
